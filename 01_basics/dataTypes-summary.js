@@ -26,16 +26,43 @@ const bigNumber = 3458555554485455854625n; // BigInt
 const heros = ["shaktiman", "nagraj", "doga"]
 let myObj = {
     name: "siddarth",
-    age: 22,
+    age: 22
 }
 
 const myFunction = function(){
     console.log("Hello World");
 }
-myFunction();
-
 
 // to check data type
-console.log(typeof myFunction);
+//console.log(typeof myFunction);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+//   Memory in Javascript
+
+// Stack (Primitive) - a copy of the value allocated when we declare a variable
+
+// Heap (Non-Primitive) - the reference of memory block is allocated when we declare it
+
+
+let myName = "siddarth"
+
+let anothername = myYoutubename
+anothername = "dayananda"
+
+console.log(myName); // siddarth
+console.log(anothername); // dayananda
+
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne // reference is assigned 
+
+userTwo.email = "siddarth@google.com"; // userOne email is also changed
+
+console.log(userOne.email);  // siddarth@google.com
+console.log(userTwo.email);  // siddarth@google.com
