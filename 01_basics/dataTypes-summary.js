@@ -34,12 +34,12 @@ const myFunction = function(){
 }
 
 // to check data type
-//console.log(typeof myFunction);
+//console.log(typeof myFunction); //object (function object)
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
 
-//   Memory in Javascript
+//  Memory in Javascript
 
 // Stack (Primitive) - a copy of the value allocated when we declare a variable
 
