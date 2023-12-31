@@ -1,11 +1,11 @@
 let score = "siddarth"
 
-//console.log(typeof score);
+console.log(typeof score); // String
 //console.log(typeof(score));
 
 let valueInNumber = Number(score) 
-//console.log(typeof valueInNumber); // number
-//console.log(valueInNumber); // NaN - not a number
+console.log(typeof valueInNumber); // number
+console.log(valueInNumber); // NaN - not a number
 
 // "33" => 33
 // "33abc" => NaN
@@ -14,7 +14,7 @@ let valueInNumber = Number(score)
 let isLoggedIn = "siddarth"
 
 let booleanisLoggedIn = Boolean(isLoggedIn)
-//console.log(booleanisLoggedIn);
+console.log(booleanisLoggedIn); // true
 
 // 1 => true; 0 => false
 // "" => false

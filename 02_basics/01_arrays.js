@@ -9,15 +9,15 @@ const myArr2 = new Array([1, 2, 3, 4])
 
 // Array methods
 
-// myArr.push(6); // add element at last 
-// myArr.push(7); // delete element at last
-// myArr.pop();
+ myArr.push(6); // add element at last 
+ myArr.push(7); 
+ myArr.pop(); // delete element at last
 
-// myArr.unshift(9); // add element at start
-// myArr.shift(); // delete element at start
+ myArr.unshift(9); // add element at first position
+myArr.shift(); // delete element at first position
 
-// console.log(myArr.includes(9));
-// console.log(myArr.indeexOf(3));
+ console.log(myArr.includes(9)); // false
+ console.log(myArr.indexOf(3)); // Check the indexing value of any item by indexof method 
 
 const newArr = myArr.join()
 
@@ -39,3 +39,9 @@ const myn2 = myArr.splice(1,3); //changes the contents of an array by removing f
 
 console.log("C ", myArr); // [0, 4, 5]
 console.log(myn2);// [1, 2, 3]
+
+// In summary, splice() is used for modifying the  original array by adding, removing, or  replacing elements at specific positions, 
+
+// while slice() is used to create a new array containing a portion of the original array without modifying it. 
+
+// Understanding the differences between these two methods is crucial when working with arrays in JavaScript.

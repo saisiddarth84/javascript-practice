@@ -6,8 +6,8 @@
 
 //Problems occur when we compare two different data types
 
-// console.log("2" > 1); =>"2" is converted to number
-// console.log("02" > 1);
+console.log("2" > 1);//"2" is converted to number
+console.log("02" > 1); // true
 
 console.log(null > 0);
 console.log(null == 0); // null is not converted to 0 but treated as undefined or NaN
