@@ -4,7 +4,7 @@ const myArr = [0, 1, 2, 3, 4, 5]
 const myHeros= ["batman", "superman"]
 
 const myArr2 = new Array([1, 2, 3, 4])
-console.log(myArr[1]);
+// console.log(myArr[1]);
 
 
 // Array methods
@@ -39,5 +39,3 @@ const myn2 = myArr.splice(1,3); //changes the contents of an array by removing f
 
 console.log("C ", myArr); // [0, 4, 5]
 console.log(myn2);// [1, 2, 3]
-
-
