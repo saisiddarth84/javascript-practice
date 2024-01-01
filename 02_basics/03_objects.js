@@ -49,4 +49,3 @@ console.log(JsUser.greeting2()); //"Hello JS user, Siddarth";
 
 
 console.log(JsUser.greeting); // function reference is returned
- 
