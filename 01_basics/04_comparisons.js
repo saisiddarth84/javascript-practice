@@ -20,7 +20,6 @@ console.log(undefined == 0); // undefined is not converted to 0
 console.log(undefined > 0);
 console.log(undefined < 0);
 
-
 // ===  - check the values strictly(data type also)
 
 console.log("2" === 2); //false (data type is different)
