@@ -63,6 +63,7 @@ let gameCounter = 100
 ++gameCounter;
 console.log(gameCounter);
 
+
 /*
     If used postfix, with operator after operand (for example, x++), the increment operator increments and returns the value before incrementing.
 
