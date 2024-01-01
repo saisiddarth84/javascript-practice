@@ -25,6 +25,7 @@ console.log(myArr);
 console.log(newArr); // converted to string (,) as seperator
 
 
+
 // slice, splice
 
 console.log("A ", myArr); // [0, 1, 2, 3, 4, 5]
