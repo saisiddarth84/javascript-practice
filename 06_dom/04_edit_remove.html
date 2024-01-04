@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color:#fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // Function to add a language using innerHTML (less efficient)
+    function addLanguage(langName) {
+        const list = document.createElement('li');
+        list.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(list)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+    //In big projects for this code ,tree will be traversing in the body which will be efficient
+
+
+    // Function to add a language using createTextNode (more efficient)
+    function addOptiLanguage(langName) {
+        const list = document.createElement('li');
+        list.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(list)
+    }
+    addOptiLanguage("golang")
+
+    // Edit operation: Replace the second language with "Mojo"
+    const secondLang = document.querySelector("li:nth-child(2)");
+    //secondLang.innerHTML = "Mojo";
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo";
+    secondLang.replaceWith(newli);
+
+     // Edit operation: Replace the first language with "TypeScript"
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>TypeSript</li>';
+
+    // Remove operation: Remove the last language
+    const lastLang = document.querySelector ('li:last-child');
+    lastLang.remove()
+</script>
+</html>
