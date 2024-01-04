@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- DOM Manipulation Example -->
+
+    <!-- A parent container with child elements representing days of the week -->
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+
+    <script>
+        // Selecting the parent container with the class 'parent'
+        const parent = document.querySelector('.parent');
+        console.log(parent);
+
+        // Accessing the child elements (HTML Collection)
+        console.log(parent.children);
+
+        // Accessing the content of the second child (Tuesday)
+        console.log(parent.children[1].innerHTML);
+
+        // Iterating through child elements and logging their content
+        for (let i = 0; i < parent.children.length; i++) {
+            console.log(parent.children[i].innerHTML);
+        }
+
+        // Changing the text color of the second child (Tuesday) to orange
+        parent.children[1].style.color = "orange";
+
+        // Accessing the first and last child elements
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
+
+        // Selecting an individual day element
+        const dayOne = document.querySelector('.day');
+        console.log(dayOne);
+
+        // Accessing the parent element of the selected day (Monday)
+        console.log(dayOne.parentElement);
+
+        // Accessing the next sibling of the selected day (Monday)
+        console.log(dayOne.nextElementSibling);
+
+        // Logging all child nodes of the parent container (including text nodes)
+        console.log("NODES: ", parent.childNodes); // NodeList[9]
+
+        // NodeList is a collection of document nodes which includes text nodes, attribute nodes, and element nodes.
+        // A line break or comment is also counted in NodeList, but only the first one. All subsequent line breaks are ignored by the browser.
+    </script>
+</body>
+</html>
+
+<!-- Important Notes:
+- The parent container is selected, and various properties and methods are applied to interact with its child elements.
+- The NodeList includes text nodes, attribute nodes, and element nodes.
+- A note about NodeList counting line breaks and comments is provided for clarity.
+-->
