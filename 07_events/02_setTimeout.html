@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>    
+</body>
+<script>
+    // JavaScript code for handling functions and timeouts
+
+    const sayName = function() {
+        console.log("Siddarth");
+    }
+    
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "Best JS series";
+    }
+    
+    // Using setTimeout to schedule the changeText function after 2000 milliseconds (2 seconds)
+    const changeMe = setTimeout(changeText, 2000);
+
+    // Event listener for the 'Stop' button to clear the scheduled timeout
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(changeMe); // Clears the scheduled timeout
+        console.log("STOPPED");
+    });
+
+</script>
+</html>
