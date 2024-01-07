@@ -6,16 +6,12 @@
     <title>Document</title>
 </head>
 <body style="background-color: #212121;">
+    <!--
     0	UNSENT	Client has been created. open() not called yet.
     1	OPENED	open() has been called.
     2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
     3	LOADING	Downloading; responseText holds partial data.
-    4	DONE	The operation is complete.
-
-    <div>
-
-    </div>
-    
+    4	DONE	The operation is complete.   -->
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
@@ -54,6 +50,7 @@ fetch('https://api.example.com/data')
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+
 V8 Engine:
 The V8 engine is an open-source JavaScript engine developed by Google. It is at the core of many modern web browsers, including Google Chrome and Chromium-based browsers, as well as Node.js. The primary purpose of the V8 engine is to execute JavaScript code in these environments.
 
