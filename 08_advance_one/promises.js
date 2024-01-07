@@ -11,6 +11,7 @@ promiseOne.then(function(){
     console.log("Promise consumed");
 });
 
+
 // 2nd Promise - Without using variables
 new Promise(function(resolve, reject){
     setTimeout(function(){
@@ -20,6 +21,7 @@ new Promise(function(resolve, reject){
 }).then(function(){
     console.log("Async 2 resolved");
 });
+
 
 // 3rd Promise - Passing data using resolve
 const promiseThree = new Promise(function(resolve, reject){
@@ -31,6 +33,7 @@ const promiseThree = new Promise(function(resolve, reject){
 promiseThree.then(function(user){
     console.log(user);
 });
+
 
 // 4th Promise - Handling errors with reject
 const promiseFour = new Promise(function(resolve, reject){
@@ -57,7 +60,6 @@ promiseFour
     })
     .finally(() => console.log("The promise is either resolved or rejected"));
 
-
 // Note: When using promises for server requests, a 404 error is considered a successful response by the promise. 
 // The promise will be resolved even if the server returns a 404 status. 
 // Actual errors (e.g., network issues, denied requests) are caught in the .catch() block.
@@ -83,8 +85,8 @@ async function consumePromiseFive(){
         console.log(error);
     }
 }
-
 consumePromiseFive();
+
 
 // Fetching data using async/await with fetch()
 async function getAllUsers(){
@@ -97,8 +99,8 @@ async function getAllUsers(){
         console.log("E: ",error);
     }
 }
-
 getAllUsers();  
+
 
 // Fetch using then and catch
 fetch('https://jsonplaceholder.typicode.com/users') 
@@ -111,7 +113,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 
 // Important Notes:
-
 // -  Promises are used for handling asynchronous operations in JavaScript.
 // - .then() is used to handle the resolved state of a promise.
 // - .catch() is used to handle errors/rejections in promises.
