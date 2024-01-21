@@ -1,66 +1,63 @@
+// Global scope: Variables declared outside of any function or block have global scope. They are accessible throughout the entire program.
+// Global scope in Node.js environment and browser environment (like Windows) can differ.
 
-// Global scope: Variables declared outside of any function or block have global scope. They are accessible Throughout the entire program
-// Global scope in node environment and windows(browser) environment is different
-
-// Block or local scope: Variables declared with let or const within a block (inside curly braces {}) have block scope.
-
-var c = 300 
-let a = 100
+var c = 300; 
+let a = 100;
 
 if (true) {
-    let a = 10
-    const b = 20
-    console.log(a) // 10
-    c = 30 
+    let a = 10; // This is a different 'a' from the one declared in the global scope.
+    const b = 20;
+    console.log(a); // Outputs: 10
+    c = 30; // Modifying the global variable 'c'
 }
 
-console.log(a); // 100
-// console.log(b); ERROR
-console.log(c); // 30
+console.log(a); // Outputs: 100 (global 'a')
+// console.log(b); // ERROR - 'b' is not defined in this scope
+console.log(c); // Outputs: 30 (modified in the block)
 
-//problem with var => variable declared with var is accessible throughout the entire function in which it is declared, regardless of the block within the function.
+// Problem with var: Variables declared with 'var' are accessible throughout the entire function in which they are declared, regardless of the block within the function.
 
-
-//Nested scope
+// Nested scope
 function one() {
-    const username = "siddarth"
+    const username = "siddarth";
 
     function two() {
-        const website = "youtube"
+        const website = "youtube";
         console.log(username);
     }
-    // console.log(website); ERROR - cant access variable outside the  scope where it is declared
+    // console.log(website); // ERROR - Can't access 'website' outside the scope where it is declared
 
-    two() 
+    two();
 }
 
-one()
+one();
 
-// Closure - child function can access parent function variable
-
+// Closure - a child function can access a parent function's variable
 if (true) {
-    const username = "siddarth"
-    if(username === "siddarth") {
-        const website = "youtube"
-        console.log(username + website); //siddarthyoutube
+    const username = "siddarth";
+    if (username === "siddarth") {
+        const website = "youtube";
+        console.log(username + website); // Outputs: siddarthyoutube
     }
-    // console.log(website); ERROR
+    // console.log(username); // ERROR - 'username' is not defined in this scope
 } 
 
-// console.log(username);  ERROR
-
-
-
 // Hoisting
-
-console.log(addone(5)); // 6
+console.log(addone(5)); // Outputs: 6
 function addone(num) {
-    return num + 1
+    return num + 1;
 }
 
-addTwo(5); // ERROR
+addTwo(5); // ERROR - 'addTwo' is not defined at this point
 const addTwo = function(num){
-    return num + 2
+    return num + 2;
 }
-// The function addTwo is assigned using a function expression (const with function expression).
-//The line addTwo(5); is executed before addTwo is assigned, leading to an error because addTwo is not defined at that point.
+// When we assign Variable to a Function defination, we CAN NOT call this Variable as Function BEFORE declaration as it will behave as Variable with UNDEFINED value.
+
+//Important Notes: 
+// - Scopes define the visibility and accessibility of variables.
+// - Global scope encompasses the entire program, local scope refers to specific blocks or functions.
+// - let and const have block scope, while var has function scope.
+// - Nested functions create nested scopes.
+// - Closure allows a function to access variables from its outer (enclosing) scope.
+// - Hoisting means declarations are moved to the top during compilation, but assignments are not.
