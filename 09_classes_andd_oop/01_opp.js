@@ -42,7 +42,6 @@ const userTwo = new User("Siddarth", 11, false);
 console.log(userOne.constructor); // Outputs: [Function: User]
 //console.log(userOne); 
 
-
 /*
 Notes:
 - Object literal syntax is a concise way to create objects in JavaScript.
